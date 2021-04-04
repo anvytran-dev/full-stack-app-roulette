@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <title>Roulette</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+        <!-- LOCAL INFORMATION -->
+    <div class="col-sm-6">
+      <div class="well">
+           <h3><span class="fa fa-user"></span> Local</h3>
+
+              <% if (user.local.email) { %>
+                <p>
+                  <strong>id</strong>: <%= user._id %><br>
+                  <strong>email</strong>: <%= user.local.email %><br>
+                  <strong>password</strong>: <%= user.local.password %>
+                </p>
+
+                <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+      </div>
+    </div>
+        
+<section class ="secAllResults">
+  <section>
+    <h2>NET PROFITS</h2>
+      <span class ="spanNetProfit">$<%= addProfits[0].total %></span>
+  </section>
+  <section>
+    <h2>PROFITS</h2>
+      <span class ="spanNetProfit">$<%= addProfits[0].total - subtractProfits %></span>
+    </section>
+    <section>
+    <h2>LOSSES</h2>
+      <span class ="spanProfit">$<%= Math.abs(subtractProfits) %></span>
+    </section>
+    
+
+
+    <section>
+      <h2>Player Wins</h2>
+        <span class ="spanPlayerWins"><%= winnerPlayer %></span>
+    </section>
+    <section>
+     <h2>House Wins</h2>
+        <span class ="spanHouseWins"><%= winnerCasino %></span>
+    </section>
+    
+
+</section>
+
+<script src="main.js"></script>
+
+</body>
+</html>

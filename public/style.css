@@ -1,0 +1,181 @@
+*{
+	box-sizing: border-box;
+	
+	font-family: 'Yusei Magic', sans-serif;
+}
+
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  padding-top: 0%;
+}
+
+body{
+  background-image: url('/bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 120rem;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.jumbotron{
+  display: flex;
+  flex-direction: row;
+}
+
+.secBetAmount{
+  display: flex;
+  flex-direction: column;
+}
+.secPokerChips{
+  display: flex;
+  width: 100%;
+}
+
+.pokerchips{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #8EB891;
+  font-size: 20px;
+}
+
+img{
+  height: 200px;
+}
+.fa-trash::before {
+    content: "\f014";
+}
+
+.num:hover{
+  background-color: magenta;
+  border-color: magenta;
+}
+
+
+body.moving {
+  cursor: move;
+}
+
+.roulette {
+  /* margin: 40px; */
+  /* margin-left: 7%; */
+  padding: 40px;
+  background: #1C7022;
+  display: table;
+  align-items: center;
+  /* position: relative; */
+  width: 775px;
+  /* transform: rotate(90deg);
+  margin:300px 0 0 -230px; */
+}
+.roulette table {
+  float: left;
+}
+.roulette table,
+tr {
+  border-collapse: collapse;
+  /*border-spacing: 0;*/
+}
+.roulette td {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 2px solid white;
+  width: 50px;
+  height: 46px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  white-space: nowrap;
+}
+/* elements */
+.roulette .sector {
+  background: #1C7022;
+  color: #8EB891;
+}
+.roulette .sector .vt {
+  font-size: 15px;
+}
+.roulette .num {
+  font-size: 22px;
+}
+.roulette .num span {
+  display: block;
+  transform: rotate(270deg);
+}
+.roulette .zero {
+  width: 70px;
+  font-size: 56px;
+}
+.roulette .empty {
+  border: none;
+}
+/* colors */
+.roulette .green {
+  background: #c9cec9;
+  color: #8EB891;
+}
+.roulette .red {
+  background: #A91607;
+  color: #8EB891;
+}
+.roulette .black {
+  background: #010201;
+  color: #8EB891;
+}
+
+.h3Owner{
+  font-size: 1rem;
+}
+
+.secMakeBet{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.secPlayerBet, .secBetPokerchips, .secButtonPlay{
+  width: 33.3333%;
+}
+
+.secPokerchips{
+  margin-right: 0%;
+}
+
+.secButtonPlay {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#submitBet, #resetBet{
+  font-size: 20px;
+}
+
+.secAllResults{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.secRoulette{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
